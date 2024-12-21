@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #232f3e;
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .header .admin-image {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background: white;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header .admin-image img {
+      max-width: 100%;
+    }
+
+    .sidebar {
+      background-color: #37475a;
+      color: white;
+      width: 250px;
+      padding: 2rem 1rem;
+      height: calc(100vh - 3.5rem);
+      position: fixed;
+      top: 3.5rem;
+      overflow-y: auto;
+      position: fixed;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: red;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 0 0 1rem;
+    }
+
+    .card table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .card table th, .card table td {
+      text-align: left;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card table th {
+      background-color: #f4f4f4;
+    }
+
+    .card-actions {
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    .card-actions button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #232f3e;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card-actions button:hover {
+      background-color: #37475a;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Admin Panel</div>
+    <div class="admin-image">
+      <img src="AksharImage.jpg" alt="Admin">
+    </div>
+  </div>
+
+  <div class="sidebar" style="margin-top: 16px;">
+    <a href="#users">Users</a>
+    <a href="#courts">Courts</a>
+    <a href="#bookings">Bookings</a>
+    <a href="#contacts">Contacts</a>
+    <a href="#others">Others</a>
+  </div>
+
+  <div class="content">
+    <div id="users" class="card">
+      <h3>Users</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>jane@example.com</td>
+            <td>User</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="card-actions">
+        <button>Add User</button>
+        <button>Manage Users</button>
+      </div>
+    </div>
+
+    <div id="courts" class="card">
+      <h3>Courts</h3>
+      <p>Manage court details here.</p>
+      <div class="card-actions">
+        <button>Add Court</button>
+        <button>View All Courts</button>
+      </div>
+    </div>
+
+    <div id="bookings" class="card">
+      <h3>Bookings</h3>
+      <p>Track and manage bookings here.</p>
+      <div class="card-actions">
+        <button>View All Bookings</button>
+      </div>
+    </div>
+
+    <div id="contacts" class="card">
+      <h3>Contacts</h3>
+      <p>View and respond to user inquiries here.</p>
+      <div class="card-actions">
+        <button>View Contacts</button>
+      </div>
+    </div>
+
+    <div id="others" class="card">
+      <h3>Other Information</h3>
+      <p>Manage additional administrative information here.</p>
+      <div class="card-actions">
+        <button>Manage</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
